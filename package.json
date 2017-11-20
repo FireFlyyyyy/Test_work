@@ -1,0 +1,16 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "description": "Test task for MEV LLC",
+  "private": true,
+  "main": "index.html",
+  "keywords": [
+    "test", "task"
+  ],
+  "author": "Yaroslav Tomilenko",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}

@@ -1,0 +1,129 @@
+.page-container {
+  padding: 0;
+}
+
+.background-slider {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .carousel,
+  .item,
+  > .active {
+    height: 100%;
+  }
+
+  .carousel-inner {
+    height: 100%;
+  }
+}
+
+.socials {
+  display: inline-block;
+
+  a {
+    display: inline-block;
+  }
+
+  .twitter {
+    width: 26px;
+    height: 26px;
+    background: url(/assets/images/social_ico.png) 0 -26px;
+  }
+
+  .twitter:hover {
+    background: url(/assets/images/social_ico.png) 0 0;
+  }
+
+  .facebook {
+    width: 26px;
+    height: 26px;
+    background: url(/assets/images/social_ico.png) -33px -26px;
+  }
+
+  .facebook:hover {
+    background: url(/assets/images/social_ico.png) -33px 0;
+  }
+
+  .rss {
+    width: 26px;
+    height: 26px;
+    background: url(/assets/images/social_ico.png) -65px -26px;
+  }
+
+  .rss:hover {
+    background: url(/assets/images/social_ico.png) -65px 0;
+  }
+}
+
+.carousel-bg {
+  .carousel-indicators {
+    li {
+      &:not(.active) {
+        width: 5px;
+        height: 5px;
+        margin: 3px;
+        background: #fff;
+      }
+    }
+  }
+
+  .carousel-inner {
+    .item {
+      background-size: cover;
+      background-position: center;
+      min-height: 360px;
+
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+          background-image: url(/assets/images/photos-#{$i}.jpg);
+        }
+      }
+    }
+  }
+
+  .carousel-control {
+    .glyphicon-chevron-right {
+      &::before {
+        display: block;
+        width: 48px;
+        height: 48px;
+        content: '';
+        background: url(/assets/images/arrows.png) no-repeat -48px, 0;
+      }
+    }
+
+    &:hover {
+      .glyphicon-chevron-right {
+        &::before {
+          background: url(/assets/images/arrows_activ.png) no-repeat -48px, 0;
+        }
+      }
+    }
+
+    .glyphicon-chevron-left {
+      &::before {
+        display: block;
+        width: 48px;
+        height: 48px;
+        content: '';
+        background: url(/assets/images/arrows.png) no-repeat 0, 0;
+      }
+    }
+
+    &:hover {
+      .glyphicon-chevron-left {
+        &::before {
+          background: url(/assets/images/arrows_activ.png) no-repeat 0, 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-control {
+    display: none;
+  }
+}

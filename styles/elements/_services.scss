@@ -1,0 +1,49 @@
+.services {
+  padding: 60px 0;
+  text-align: center;
+  overflow: hidden;
+
+  .item {
+    display: inline-block;
+
+    .title {
+      font: bold 16px 'Acrom';
+      text-transform: uppercase;
+      color: $service-title;
+      display: block;
+      padding: 15px 0 10px;
+    }
+
+    .description {
+      font: 12px 'Helvetica';
+      color: $service-description;
+      line-height: 1.5;
+      display: block;
+      padding: 10px 0;
+      max-width: 250px;
+      margin: 0 auto;
+    }
+
+    .link {
+      text-decoration: none;
+      text-transform: capitalize;
+      font: 12px 'Helvetica';
+      color: $service-link;
+      transition: .3s;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    padding: 20px 0;
+
+    .item {
+      padding: 30px 0;
+    }
+  }
+}

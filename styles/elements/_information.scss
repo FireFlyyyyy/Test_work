@@ -1,0 +1,52 @@
+.information {
+  padding: 40px 0;
+  text-align: center;
+  border-bottom: 1px solid #cccccc;
+
+  &.top-border {
+    border-top: 1px solid #cccccc;
+    border-bottom: 0;
+  }
+
+  .title {
+    font: bold 16px 'Acrom';
+    text-transform: uppercase;
+    color: $information-title;
+    display: block;
+    margin: 15px auto;
+  }
+
+  .description {
+    font: 12px 'Helvetica';
+    color: $information-description;
+    line-height: 1.5;
+    margin: 10px auto;
+    display: block;
+    max-width: 700px;
+  }
+
+  .link {
+    width: 170px;
+    border: none;
+    background-color: $information-link;
+    font: bold 10px 'Acrom';
+    color: #ffffff;
+    display: block;
+    padding: 8px 0;
+    margin: 15px auto;
+    text-decoration: none;
+    border-radius: 0;
+
+    transition: .3s;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .information {
+    padding: 40px 20px;
+  }
+}

@@ -1,0 +1,167 @@
+header {
+  position: relative;
+
+  .header-content {
+    position: relative;
+    height: 524px;
+  }
+
+  .logo-container {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $header-logo-container-border;
+
+    .mobile-menu-button,
+    .mobile-menu {
+      display: none;
+    }
+  }
+
+  .menu-container {
+    position: relative;
+
+    .search {
+      width: 250px;
+      margin: 0 auto;
+      height: 18px;
+    }
+
+    .search input {
+      height: 25px;
+      width: 0;
+      padding: 0 20px 10px 15px;
+      color: $header-logo-container-border;
+      border: none;
+      border-bottom: 3px solid transparent;
+      outline: none;
+      background: transparent;
+      transition: .4s cubic-bezier(0, 0.8, 0, 1);
+      position: absolute;
+      top: 10px;
+      right: 0;
+      z-index: 200;
+    }
+
+    .search button {
+      background: url("/assets/images/search.png") no-repeat;
+      border: none;
+      height: 15px;
+      width: 15px;
+      position: absolute;
+      top: 10px;
+      right: 0;
+      cursor: pointer;
+    }
+
+    .search input:focus {
+      width: 250px;
+      z-index: 100;
+      border-bottom: 2px solid $header-search;
+      font: 14px 'Acrom';
+      color: #fff;
+    }
+  }
+
+  .menu {
+    padding: 0;
+    margin: 10px 0 0;
+
+    .item {
+      display: inline-block;
+      padding: 0;
+      margin: 10px;
+      color: #fff;
+      font: 14px 'Acrom';
+      text-decoration: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &.active {
+        font: bold 14px 'Acrom';
+      }
+
+      &.active,
+      &:hover {
+        border-bottom: 3px solid $header-menu-border;
+      }
+    }
+  }
+
+  .caption {
+    position: relative;
+    top: 50px;
+
+    .title {
+      font: bold 26px 'Acrom';
+      color: #ffffff;
+      text-align: center;
+
+      span {
+        color: $header-menu-border;
+      }
+    }
+
+    .description {
+      margin-top: 0;
+      font: 16px/1.5 'Helvetica';
+      color: $header-description;
+      text-align: center;
+    }
+
+    .articles {
+      width: 170px;
+      border: 2px solid $header-description;
+      font: bold 10px 'Acrom';
+      color: $header-description;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 8px 0;
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      top: 35px;
+      transition: .3s;
+      background: none;
+
+      &:hover {
+        background: rgba($header-description, .3);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    .caption {
+      padding: 0 20px;
+    }
+
+    .logo-container {
+      justify-content: center;
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .socials {
+        display: none;
+      }
+    }
+
+    .menu-container {
+      .menu {
+        display: none;
+      }
+
+      .search {
+        position: absolute;
+        top: -54px;
+        right: 0;
+      }
+    }
+  }
+}
